@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --base-clr: #003061be;
+    --line-clr: #ffffff;
+    --hover-clr: #222533;
+    --text-clr: #e6e6ef;
+    --accent-clr: #5e63ff;
+    --secondary-text-clr: #b0b3c1;
+  }
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: var(--base-clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Main Container */
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 90%;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Header Styling */
+header {
+    text-align: center; 
+}
+
+header h2 {
+    display: flex; /* Align icon and text in a row */
+    align-items: center; /* Vertically center the icon and text */
+    justify-content: center; /* Horizontally center everything */
+    margin: 0; /* Remove default margins */
+    color: #333;
+    font-size: 2rem; /* Slightly increase the font size */
+    font-weight: bold; /* Make the text bold */
+    padding-bottom: 5px; /* Space below the text */
+    gap: 10px; /* Space between the icon and the text */
+    border-bottom: 3px solid rgba(255, 255, 255, 0.5); /* Add a subtle semi-transparent bottom border */
+}
+
+.profile-icon {
+    font-size: 3rem; /* Large icon for emphasis */
+    color: #007bff;
+}
+
+
+/* Profile Info Section */
+.profile-info {
+    margin: 20px 0;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-item label {
+    font-weight: bold;
+    color: #555;
+}
+
+.info-item span {
+    color: #007bff;
+    font-style: italic;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.button-container a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+/* Edit Button */
+.btn-edit {
+    background-color: #007bff;
+}
+
+.btn-edit:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Back Button */
+.btn-back {
+    background-color: #dc3545;
+}
+
+.btn-back:hover {
+    background-color: #a71d2a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .info-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .info-item label {
+        margin-bottom: 5px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Keyframes for Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

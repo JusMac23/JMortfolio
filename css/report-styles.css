@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Report Container Styling */
+.report-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-end; /* Align items to the right */
+    margin-top: 20px;
+}
+
+/* Button Styling */
+.btn-report {
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    gap: 10px;
+    background-color: #007bff; /* Blue background */
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff; /* White text */
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-report:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-3px); /* Lift effect */
+}
+
+.btn-report i {
+    font-size: 18px;
+}
+
+/* Form Button Specific Styling */
+form button.btn-report {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center button content */
+    gap: 10px;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .report-container {
+        flex-direction: column; /* Stack items vertically */
+        gap: 15px;
+    }
+
+    .btn-report {
+        width: 100%; /* Full-width button */
+        justify-content: center;
+    }
+}

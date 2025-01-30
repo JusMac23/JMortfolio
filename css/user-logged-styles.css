@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.user-header {
+  display: flex;
+  justify-content: flex-end; /* Aligns all content to the right */
+  align-items: center; /* Vertically centers items */
+  padding: 10px;
+  margin-bottom: 10px;
+  position: relative; /* Required for dropdown positioning */
+}
+.user-logged {
+  display: flex;
+  align-items: center;
+  cursor: pointer; /* Makes it look clickable */
+  position: relative; /* For dropdown positioning */
+  gap: 5px;
+}
+
+.user-logged i {
+  margin-right: 5px; /* Adds spacing between the icon and email */
+}
+.dropdown-menu {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 100%; /* Positions below the user-logged div */
+  right: 0; /* Aligns the dropdown to the right */
+  background-color: #fff; /* Background color for the dropdown */
+  border: 1px solid #ccc; /* Adds a border */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  z-index: 1000; /* Ensures it's above other elements */
+  list-style: none; /* Removes default list styling */
+  padding: 8px 0; /* Adds space inside the dropdown */
+  width: 210px; /* Sets a fixed width */
+}
+.dropdown-menu a {
+  display: block; /* Makes each link take up the full width */
+  padding: 10px 20px; /* Adds spacing around each link */
+  text-decoration: none; /* Removes underline */
+  color: #333; /* Sets text color */
+  transition: background-color 0.3s; /* Smooth hover effect */
+}
+.dropdown-menu a:hover {
+  background-color: #003061be; /* Adds a hover effect */
+  color: #ffffff;
+}
+.user-logged:hover .dropdown-menu {
+  display: block; /* Shows the dropdown on hover */
+}
+
+#sidebar {
+  position: relative;
+  height: 100vh; /* Full height of the viewport */
+  display: flex;
+  flex-direction: column;
+}
+.p{
+margin: 0;
+}
+
+.version {
+  background-color: #ffffff;
+  color: #003061;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: background-color 0.3s, transform 0.3s;
+  padding-top: 2px; /* Added margin at the top */
+  padding-bottom: 2px; /* Added margin at the top */
+}
+
+.version:hover {
+  background-color: #00609f; /* Light blue on hover */
+  color: #ffffff; /* Text turns white on hover */
+  transform: scale(1.05); /* Slight scale effect */
+}
+
+
+/* Footer Styling */
+.version-footer {
+  background-color: transparent; 
+  text-align: center;
+  padding: 20px; 
+  font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#sidebar ul {
+  flex-grow: 1; /* Allow the main content to grow */
+}
+.sidebar-footer {
+  margin-bottom: 10px; 
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #ffffff;
+}
+/* Initially show the rights reserved text */
+#rights-reserved {
+  display: block;
+  text-align: center;  /* Horizontally centers the text */
+  margin: 0;            /* Optional: removes default margin */
+  padding: 0;           /* Optional: removes default padding */
+}
+
+/* When the sidebar is closed, hide the rights reserved text */
+#sidebar.close #rights-reserved {
+  display: none;
+}
